@@ -52,6 +52,22 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Failed to load image:', imagePath);
             console.error('Attempted URL:', this.src);
             console.error('Image element:', this);
+
+            // Try to fetch the image to get more details
+            fetch(imagePath, { method: 'HEAD' })
+                .then(response => {
+                    console.error('Image fetch response:', {
+                        status: response.status,
+                        statusText: response.statusText,
+                        headers: Object.fromEntries(response.headers.entries())
+                    });
+                })
+                .catch(err => {
+                    console.error('Image fetch error:', err);
+                });
+
+            // Show a placeholder message
+            this.alt = `Failed to load: ${imagePath}`;
         };
         detailScreenshot.onload = function() {
             console.log('Image loaded successfully:', imagePath);

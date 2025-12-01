@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Test</title>
+</head>
+<body>
+    <h1>Image Loading Test</h1>
+    <p>Testing if images are accessible:</p>
+
+    <h2>Test 1: Direct img tags</h2>
+    <img src="/assets/images/TimeTrackerPro.png" alt="TimeTrackerPro" style="max-width: 300px;">
+
+    <h2>Test 2: All images</h2>
+    <ul id="imageList"></ul>
+
+    <h2>Test 3: Fetch test</h2>
+    <pre id="fetchResults"></pre>
+
+    <script>
+        const images = [
+            '/assets/images/TimeTrackerPro.png',
+            '/assets/images/MoonsilverWaypoints.png',
+            '/assets/images/SoccerGameTracker.png',
+            '/assets/images/TaskStat.png',
+            '/assets/images/CollectSomeMore_movies.png',
+            '/assets/images/Timetrak.png'
+        ];
+
+        const list = document.getElementById('imageList');
+        const results = document.getElementById('fetchResults');
+        let output = '';
+
+        images.forEach(async (img) => {
+            const li = document.createElement('li');
+            li.innerHTML = `<img src="${img}" style="max-width:200px;" onerror="this.parentElement.style.color='red'; this.style.display='none'; this.parentElement.innerHTML += ' ❌ FAILED';" onload="this.parentElement.innerHTML += ' ✅ LOADED';"> ${img}`;
+            list.appendChild(li);
+
+            // Fetch test
+            try {
+                const response = await fetch(img, { method: 'HEAD' });
+                output += `${img}: ${response.status} ${response.statusText}\n`;
+            } catch (err) {
+                output += `${img}: ERROR - ${err.message}\n`;
+            }
+            results.textContent = output;
+        });
+    </script>
+</body>
+</html>
