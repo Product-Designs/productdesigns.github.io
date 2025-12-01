@@ -10,7 +10,8 @@ export default function(eleventyConfig) {
   eleventyConfig.setLayoutsDirectory("_includes")
 
   // Copy static assets
-  eleventyConfig.addPassthroughCopy("src/assets/images");
+  // Images need to be copied to the correct location in _site
+  eleventyConfig.addPassthroughCopy({ "src/assets/images": "assets/images" });
   eleventyConfig.addPassthroughCopy("src/assets/js");
   eleventyConfig.addPassthroughCopy("figma-assets");
 

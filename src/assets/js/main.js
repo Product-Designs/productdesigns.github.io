@@ -25,14 +25,38 @@ document.addEventListener('DOMContentLoaded', () => {
         meta: JSON.parse(card.dataset.meta || '[]')
     }));
 
+    // Debug: Log all screenshot paths
+    console.log('Card data loaded:', cardData.length, 'cards');
+    console.log('Screenshot paths:', cardData.map(d => d.screenshot));
+
     // Function to show detail section with card data
     function showDetail(index) {
         const data = cardData[index];
 
+        // Debug logging for production
+        console.log('Loading screenshot:', data.screenshot);
+
+        // Ensure the path is properly formed
+        // If it starts with /, keep it as is (absolute path from root)
+        // This ensures it works on Cloudflare Pages
+        const imagePath = data.screenshot.startsWith('/') ? data.screenshot : '/' + data.screenshot;
+        console.log('Full URL:', window.location.origin + imagePath);
+
         // Populate detail section
         detailImage.style.backgroundImage = data.gradient;
         detailBadge.textContent = data.badge;
-        detailScreenshot.src = data.screenshot;
+
+        // Set the image source and add error handling
+        detailScreenshot.src = imagePath;
+        detailScreenshot.onerror = function() {
+            console.error('Failed to load image:', imagePath);
+            console.error('Attempted URL:', this.src);
+            console.error('Image element:', this);
+        };
+        detailScreenshot.onload = function() {
+            console.log('Image loaded successfully:', imagePath);
+        };
+
         detailTitle.textContent = data.title;
         detailDescription.textContent = data.description;
 
