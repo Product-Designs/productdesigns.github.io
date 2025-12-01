@@ -1,0 +1,99 @@
+[
+  {
+    "title": "TimeTracker App",
+    "badge": "🎨 UI/UX - Dev",
+    "gradient": "linear-gradient(135deg, #ff0080 0%, #ff8c00 100%)",
+    "screenshots": [
+      "/assets/images/TimeTrackerPro.png"
+    ],
+    "description": "A progressive web app for seamless time management and productivity tracking.",
+    "detailedDescription": "A progressive web app designed to help users manage their time effectively. Features include task tracking and detailed productivity reports.",
+    "meta": [
+      { "label": "Platform", "value": "Web, PWA" },
+      { "label": "Duration", "value": "6 months" },
+      { "label": "Role", "value": "Lead Designer & Developer" },
+      { "label": "Year", "value": "2025" }
+    ]
+  },
+  {
+    "title": "Game Tracker",
+    "badge": "💻 Dev and Design",
+    "gradient": "linear-gradient(135deg, #00d4ff 0%, #0066ff 100%)",
+    "screenshots": [
+      "/assets/images/MoonsilverWaypoints.png"
+    ],
+    "description": "Comprehensive platform for tracking touraments, scores, and player stats.",
+    "detailedDescription": "Comprehensive platform for tracking tournaments, scores, and player stats. Designed for Magic: The Gathering enthusiasts to manage their gaming activities efficiently.",
+    "meta": [
+      { "label": "Platform", "value": "Web" },
+      { "label": "Duration", "value": "8 months" },
+      { "label": "Role", "value": "Developer, Designer" },
+      { "label": "Year", "value": "2024-2025" }
+    ]
+  },
+  {
+    "title": "Soccer Game Tracker",
+    "badge": "⚽️ Sports App",
+    "gradient": "linear-gradient(135deg, #00ff88 0%, #00ffdd 100%)",
+    "screenshots": [
+      "/assets/images/SoccerGameTracker.png"
+    ],
+    "description": "Track game stats, rosters, and history for local soccer leagues.",
+    "detailedDescription": "Track game stats, rosters, and history for local soccer leagues. A user-friendly app designed to keep players and coaches informed and engaged throughout the season.",
+    "meta": [
+      { "label": "Platform", "value": "iOS" },
+      { "label": "Duration", "value": "Ongoing" },
+      { "label": "Role", "value": "Product Designer and Developer" },
+      { "label": "Year", "value": "2025" }
+    ]
+  },
+  {
+    "title": "Task Stat",
+    "badge": "✅ Productivity",
+    "gradient": "linear-gradient(135deg, #ff0099 0%, #ffff00 100%)",
+    "screenshots": [
+      "/assets/images/TaskStat.png"
+    ],
+    "description": "A simple task tracking app to manage personal and professional tasks",
+    "detailedDescription": "A simple task tracking app to manage personal and professional tasks. Features include due dates, priority levels, and progress tracking to help users stay organized and productive.",
+    "meta": [
+      { "label": "Type", "value": "Productivity" },
+      { "label": "Duration", "value": "Ongoing" },
+      { "label": "Role", "value": "Development and Design" },
+      { "label": "Year", "value": "2025" }
+    ]
+  },
+  {
+    "title": "Collect Some More",
+    "badge": "📀 Collections",
+    "gradient": "linear-gradient(135deg, #fff999 0%, #fff000 100%)",
+    "screenshots": [
+      "/assets/images/CollectSomeMore_movies.png"
+    ],
+    "description": "A collection management app for movies and games.",
+    "detailedDescription": "A collection management app for movies and games. Users can catalog their collections, track items they own, and discover new additions based on their interests.",
+    "meta": [
+      { "label": "Type", "value": "Collections" },
+      { "label": "Duration", "value": "Ongoing" },
+      { "label": "Role", "value": "Development and Design" },
+      { "label": "Year", "value": "2025" }
+    ]
+  },
+
+  {
+    "title": "SwitchSuite",
+    "badge": "🏗️ Product",
+    "gradient": "linear-gradient(135deg, #ff00ff 0%, #00ffaa 100%)",
+    "screenshots": [
+      "/assets/images/Timetrak.png"
+    ],
+    "description": "Centralized system for managing contracts and time logs.",
+    "detailedDescription": "Centralized system for managing contracts and time logs. Designed to streamline administrative tasks and improve efficiency for businesses.",
+    "meta": [
+      { "label": "Platform", "value": "Web" },
+      { "label": "Duration", "value": "12 months" },
+      { "label": "Role", "value": "Lead Product Designer" },
+      { "label": "Year", "value": "2020" }
+    ]
+  }
+]

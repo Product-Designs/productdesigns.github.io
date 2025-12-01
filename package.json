@@ -1,0 +1,58 @@
+{
+  "name": "productdesigns.github.io",
+  "version": "1.0.0",
+  "description": "The landing page for productdesigns.net",
+  "keywords": [
+    "product",
+    "designs",
+    "product",
+    "designs",
+    "showcase",
+    "design",
+    "showcase"
+  ],
+  "homepage": "https://github.com/Product-Designs/productdesigns.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/Product-Designs/productdesigns.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Product-Designs/productdesigns.github.io.git"
+  },
+  "license": "ISC",
+  "author": "Adam J. Jolicoeur",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": "25.x"
+  },
+  "scripts": {
+    "stylelint": "npx stylelint '**/*.scss'",
+    "stylelint:fix": "npx stylelint --fix `src/assets/scss/site.scss`",
+    "sass:build": "mkdir -p _site/assets/css && sass src/assets/scss/site.scss _site/assets/css/site.css --style=compressed",
+    "lint": "stylelint 'src/assets/scss/*.scss'",
+    "lint:fix": "stylelint --fix 'src/assets/scss/*.scss'",
+    "sass:watch": "mkdir -p _site/assets/css && sass --watch src/assets/scss:_site/assets/css --style=expanded",
+    "eleventy:build": "eleventy",
+    "eleventy:serve": "eleventy --serve",
+    "prebuild": "npm run sass:build",
+    "build": "npm run eleventy:build",
+    "prestart": "npm run sass:build",
+    "start": "npm-run-all --parallel sass:watch eleventy:serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-vite": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.94.2",
+    "vite": "^7.2.4",
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-order": "^7.0.0"
+  },
+  "browserslist": [
+    "> 5%, not dead",
+    "last 2 major versions"
+  ]
+}

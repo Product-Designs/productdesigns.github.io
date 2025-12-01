@@ -1,0 +1,54 @@
+// ============================================
+// ArcLight Pulse Design System - Main Stylesheet
+// ============================================
+// Master SCSS file that imports all partials
+// Compiles to: _site/assets/css/site.css
+
+// ==================
+// 1. Variables & Configuration
+// ==================
+// CSS Custom Properties for the design system
+@use "spacing";
+@use "variables";
+
+// ==================
+// 2. Base & Reset
+// ==================
+// Global styles, resets, and utilities
+@use "base";
+@use "alignment";
+
+// ==================
+// 3. Navigation
+// ==================
+// Slide-out navigation menu
+// @import "navigation";
+
+// ==================
+// 4. Page-Specific Styles
+// ==================
+
+// Main showcase page (Visual Breadcrumb Trail)
+@use "main";
+
+// Discovery & Progress System
+// @import "discovery-progress";
+
+// Fog of War Reveal
+// @import "fog-reveal";
+
+// Branding page
+@use "branding";
+
+// Component examples page
+// @import "examples";
+
+// ==================
+// Notes
+// ==================
+// This file compiles all SCSS partials into a single CSS file.
+// Each partial file (_filename.scss) contains styles for a specific
+// component or page section.
+//
+// Build command: sass src/assets/scss/site.scss _site/assets/css/site.css
+// Watch command: sass --watch src/assets/scss:_site/assets/css

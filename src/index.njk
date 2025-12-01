@@ -1,0 +1,66 @@
+---
+layout: base.njk
+title: ArcLight Pulse - Carousel design
+description: Design Portfolio - Visual Breadcrumb Trail
+---
+
+<div class="header">
+  <h1>PRODUCT DESIGNS</h1>
+  <p>Experiments, Prototypes &amp; Side Projects</p>
+  <p class="pt-2">
+    This is my playground for exploring new technologies, design patterns, and ideas that don't fit traditional case studies.
+    <br />
+    These projects range from weekend experiments to learning exercises—they're not polished portfolio pieces, but they show how I think, learn, and prototype.
+    <br />
+    For my professional portfolio, visit: <a href="https://www.adamjolicoeur.com" alt="link to adamjolicoeur.com" target="_blank">adamjolicoeur.com</a>
+  </p>
+</div>
+
+<div class="showcase-container">
+  <div class="design-trail" id="trail">
+    {% for design in designs %}
+    <div class="design-card {% if loop.index > 1 %}peeking{% endif %}"
+        data-title="{{ design.title }}"
+        data-badge="{{ design.badge }}"
+        data-gradient="{{ design.gradient }}"
+        data-screenshot="{{ design.screenshots[0] }}"
+        data-description="{{ design.detailedDescription }}"
+        data-meta='{{ design.meta | dump | safe }}'>
+      <div class="design-image" style="background-image: {{ design.gradient }}; box-shadow: inset 0 0 100px rgba({{ loop.index * 50 }}, 0, {{ loop.index * 30 }}, 0.3);">
+      </div>
+        <div class="design-badge">{{ design.badge }}</div>
+      <div class="design-info">
+        <div>
+          <h2 class="design-title">{{ design.title }}</h2>
+          <p class="design-description">{{ design.description }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+    <div class="nav-hint next-hint" id="nextHint">→</div>
+    <div class="nav-hint prev-hint" id="prevHint">←</div>
+</div>
+
+<div class="progress-indicator" id="progressIndicator"></div>
+
+<!-- Detail Section -->
+<div class="detail-section" id="detailSection">
+    <div class="detail-container">
+        <div class="detail-close" id="detailClose">×</div>
+        <div class="detail-header">
+            <div class="detail-image" id="detailImage" style="display: flex; justify-content: center; align-items: center;">
+              <img class="detail-screenshot" id="detailScreenshot" src="" alt="Design Screenshot" style="border-radius: 8px;" />
+            </div>
+            <div class="detail-info">
+                <div class="detail-badge" id="detailBadge"></div>
+                <h2 class="detail-title" id="detailTitle"></h2>
+                <p class="detail-description" id="detailDescription"></p>
+            </div>
+        </div>
+        <div class="detail-meta" id="detailMeta">
+            <!-- Meta items will be dynamically inserted here -->
+        </div>
+    </div>
+</div>
