@@ -30,14 +30,16 @@
     "stylelint": "npx stylelint '**/*.scss'",
     "stylelint:fix": "npx stylelint --fix `src/assets/scss/site.scss`",
     "sass:build": "mkdir -p _site/assets/css && sass src/assets/scss/site.scss _site/assets/css/site.css --style=compressed",
+    "copy:images": "mkdir -p _site/images && cp -r src/assets/images/* _site/images/",
+    "prepare:build": "npm run sass:build",
     "lint": "stylelint 'src/assets/scss/*.scss'",
     "lint:fix": "stylelint --fix 'src/assets/scss/*.scss'",
     "sass:watch": "mkdir -p _site/assets/css && sass --watch src/assets/scss:_site/assets/css --style=expanded",
     "eleventy:build": "eleventy",
     "eleventy:serve": "eleventy --serve",
-    "prebuild": "npm run sass:build",
-    "build": "npm run eleventy:build",
-    "prestart": "npm run sass:build",
+    "prebuild": "npm run prepare:build",
+    "build": "npm run eleventy:build && npm run copy:images",
+    "prestart": "npm run prepare:build",
     "start": "npm-run-all --parallel sass:watch eleventy:serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -46,10 +48,11 @@
     "@11ty/eleventy-plugin-vite": "^7.0.0",
     "npm-run-all": "^4.1.5",
     "sass": "^1.94.2",
-    "vite": "^7.2.4",
     "stylelint": "^16.26.1",
     "stylelint-config-standard-scss": "^16.0.0",
-    "stylelint-order": "^7.0.0"
+    "stylelint-order": "^7.0.0",
+    "vite": "^7.2.4",
+    "vite-plugin-static-copy": "^3.1.4"
   },
   "browserslist": [
     "> 5%, not dead",
