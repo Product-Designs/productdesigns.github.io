@@ -11,19 +11,37 @@
 
 body {
   font-family: var(--font-family-primary);
-  background: var(--color-deep-space);
+  // background: var(--color-vault-black);
+  background-image: var(--gradient-pipboy-green);
   min-height: 100vh;
   overflow-x: hidden;
   position: relative;
+  color: var(--color-pipboy-green);
 
+  /* CRT Scanline Effect */
   &::before {
     content: '';
     position: fixed;
     inset: 0;
     background:
-      radial-gradient(circle at 20% 20%, var(--neon-green-10) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, var(--neon-magenta-10) 0%, transparent 50%);
+      repeating-linear-gradient(0deg,
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px);
     pointer-events: none;
+    z-index: 9999;
+    animation: scanline 8s linear infinite;
+  }
+
+  /* Subtle Vignette Effect (like old CRT monitors) */
+  &::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, transparent 50%, rgba(0, 0, 0, 0.5) 100%);
+    pointer-events: none;
+    z-index: 9998;
   }
 }
 
@@ -32,8 +50,13 @@ body {
 // ==================
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes pageLoad {
@@ -41,6 +64,7 @@ body {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -48,19 +72,71 @@ body {
 }
 
 @keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes unlock {
-  0% { transform: scale(0) rotate(-180deg); }
-  50% { transform: scale(1.2) rotate(10deg); }
-  100% { transform: scale(1) rotate(0deg); }
+  0% {
+    transform: scale(0) rotate(-180deg);
+  }
+
+  50% {
+    transform: scale(1.2) rotate(10deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
 }
 
 @keyframes pulse-text {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes flicker {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  41%,
+  43% {
+    opacity: 0.8;
+  }
+
+  45%,
+  47% {
+    opacity: 0.9;
+  }
+
+  49% {
+    opacity: 1;
+  }
 }
 
 // ==================
@@ -82,14 +158,20 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 img.detail-screenshot {
   max-width: 90%;
   height: 90%;
 }
 
 a {
-  color:#43e97b;
+  color: var(--color-terminal-amber);
+  text-shadow: var(--shadow-amber-glow);
+  transition: all var(--transition-fast);
 }
+
 a:hover {
+  color: var(--color-pipboy-green);
+  text-shadow: var(--shadow-glow-text);
   text-decoration: underline;
 }

@@ -20,7 +20,7 @@ export default function(eleventyConfig) {
   // Copy static assets - must happen BEFORE Vite processes
   // Images need to be copied to the correct location in _site
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "assets/images" });
-  eleventyConfig.addPassthroughCopy("src/assets/js");
+  eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
   eleventyConfig.addPassthroughCopy("figma-assets");
 
   // Set passthrough copy behavior

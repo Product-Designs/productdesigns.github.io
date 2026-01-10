@@ -4,63 +4,51 @@ title: Product Designs - Experiments & Prototypes
 description: Design experiments, prototypes, and side projects by Adam J. Jolicoeur
 ---
 
+<div class="crt-overlay"></div>
+<div class="theme-switcher">
+    <div class="theme-btn green active" id="themeGreen" title="Vault-Tec Green"></div>
+    <div class="theme-btn orange" id="themeOrange" title="Wasteland Orange"></div>
+</div>
 <div class="header">
-  <h1>PRODUCT DESIGNS</h1>
-  <p>Experiments, Prototypes &amp; Side Projects</p>
-  <p class="pt-2">
-    This is my playground for exploring new technologies, design patterns, and ideas that don't fit traditional case studies.
-    <br />
-    These projects range from weekend experiments to learning exercises—they're not polished portfolio pieces, but they show how I think, learn, and prototype.
-    <br />
-    For my professional portfolio, visit: <a href="https://www.adamjolicoeur.com" alt="link to adamjolicoeur.com" target="_blank">adamjolicoeur.com</a>
-  </p>
+    <h1>PRODUCT-DESIGN ARCHIVES</h1>
+    <p class="subtitle">project database // experimental prototypes</p>
+    <p class="description">
+        Welcome to the product-design terminal interface.
+        <br/> Browse experimental prototypes and side projects from the wasteland of creative explorations.
+    </p>
 </div>
-
-<div class="showcase-container">
-  <div class="design-trail" id="trail">
-    {% for design in designs %}
-    <div class="design-card {% if loop.index > 1 %}peeking{% endif %}"
-        data-title="{{ design.title }}"
-        data-badge="{{ design.badge }}"
-        data-gradient="{{ design.gradient }}"
-        data-screenshot="{{ design.screenshots[0] }}"
-        data-description="{{ design.detailedDescription }}"
-        data-meta='{{ design.meta | dump | safe }}'>
-      <div class="design-image" style="background-image: {{ design.gradient }}; box-shadow: inset 0 0 100px rgba({{ loop.index * 50 }}, 0, {{ loop.index * 30 }}, 0.3);">
-      </div>
-        <div class="design-badge">{{ design.badge }}</div>
-      <div class="design-info">
-        <div>
-          <h2 class="design-title">{{ design.title }}</h2>
-          <p class="design-description">{{ design.description }}</p>
+<div class="terminal-interface">
+    <div class="terminal-menu">
+        <div class="corner-frame">
+            <ul class="menu-list" id="projectList">
+                {% for design in designs %}
+                    <li class="menu-item {% if loop.first %}active{% endif %}" data-index="{{ loop.index0 }}" data-title="{{ design.title }}" data-description="{{ design.detailedDescription }}" data-meta='{{ design.meta | dump | safe }}'>
+                        {{ design.title }}
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
-      </div>
     </div>
-    {% endfor %}
-  </div>
-
-    <div class="nav-hint next-hint" id="nextHint">→</div>
-    <div class="nav-hint prev-hint" id="prevHint">←</div>
+    <div class="terminal-content">
+        <div class="corner-frame detail-frame">
+            <div id="contentArea">
+                <h2 class="content-title" id="activeTitle">{{ designs[0].title }}</h2>
+                <p class="content-description" id="activeDescription">{{ designs[0].detailedDescription }}</p>
+            </div>
+        </div>
+    </div>
 </div>
-
-<div class="progress-indicator" id="progressIndicator"></div>
-
-<!-- Detail Section -->
-<div class="detail-section" id="detailSection">
-    <div class="detail-container">
-        <div class="detail-close" id="detailClose">×</div>
-        <div class="detail-header">
-            <div class="detail-image" id="detailImage" style="display: flex; justify-content: center; align-items: center;">
-              <img class="detail-screenshot" id="detailScreenshot" src="" alt="Design Screenshot" style="border-radius: 8px;" />
-            </div>
-            <div class="detail-info">
-                <div class="detail-badge" id="detailBadge"></div>
-                <h2 class="detail-title" id="detailTitle"></h2>
-                <p class="detail-description" id="detailDescription"></p>
-            </div>
-        </div>
-        <div class="detail-meta" id="detailMeta">
-            <!-- Meta items will be dynamically inserted here -->
-        </div>
+<div class="terminal-footer">
+    <div class="meta-box corner-frame" id="metaType">
+        <span class="label">TYPE:</span>
+        <span class="value" id="valType">---</span>
+    </div>
+    <div class="meta-box corner-frame" id="metaRole">
+        <span class="label">ROLE:</span>
+        <span class="value" id="valRole">---</span>
+    </div>
+    <div class="meta-box corner-frame" id="metaYear">
+        <span class="label">YEAR:</span>
+        <span class="value" id="valYear">---</span>
     </div>
 </div>
