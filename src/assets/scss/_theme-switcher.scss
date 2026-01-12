@@ -1,0 +1,49 @@
+// ==================
+// Theme Switcher
+// ==================
+.theme-switcher {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+    z-index: var(--z-overlay);
+
+    .theme-btn {
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 2px solid var(--color-pipboy-green);
+        cursor: pointer;
+        transition: all var(--transition-base);
+
+        &.green {
+            // do not use variables, as they change when theme switches
+            background: #00ff41;
+            box-shadow: 0 0 5px var(--pipboy-green-30);
+
+            &:hover {
+                box-shadow: var(--shadow-glow-border);
+            }
+        }
+
+        &.orange {
+            // do not use variables, as they change when theme switches
+            background: #ff6600;
+            border-color: #ff6600;
+            box-shadow: 0 0 5px var(--terminal-amber-30);
+
+            &:hover {
+                box-shadow: var(--shadow-amber-glow);
+            }
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &.active {
+            outline: 2px solid var(--color-white);
+            outline-offset: 3px;
+        }
+    }
+}

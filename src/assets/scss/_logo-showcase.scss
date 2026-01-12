@@ -1,0 +1,94 @@
+/* ============================================
+   Logo Showcase
+   ============================================ */
+
+.logos-section {
+    background: rgba(255, 255, 255, 2%);
+    border-radius: 24px;
+    padding: 60px 40px;
+}
+
+.logo-showcase {
+    display: grid;
+    gap: 40px;
+}
+
+.logo-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    background: rgba(255, 255, 255, 5%);
+    border: 2px solid rgba(67, 233, 123, 20%);
+    border-radius: 20px;
+    padding: 30px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-card.primary {
+    border-color: rgba(67, 233, 123, 50%);
+    box-shadow: 0 0 30px rgba(67, 233, 123, 20%);
+}
+
+.logo-card:hover {
+    border-color: rgba(67, 233, 123, 60%);
+    box-shadow: 0 10px 40px rgba(67, 233, 123, 20%);
+    transform: translateY(-3px);
+}
+
+.logo-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 12px;
+    min-height: 200px;
+}
+
+.logo-preview.dark-bg {
+    background: #0f0f1e;
+}
+
+.logo-preview img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    margin: 0 0 10px;
+}
+
+.logo-specs {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 50%);
+    font-family: 'Courier New', monospace;
+    margin: 5px 0 15px;
+}
+
+.logo-usage {
+    color: rgba(255, 255, 255, 70%);
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(56, 249, 215, 20%);
+    border: 1px solid rgba(56, 249, 215, 50%);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #38f9d7;
+    margin-top: 10px;
+}
+
+.badge.primary-badge {
+    background: rgba(67, 233, 123, 20%);
+    border-color: rgba(67, 233, 123, 50%);
+    color: #43e97b;
+}

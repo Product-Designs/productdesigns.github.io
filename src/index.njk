@@ -1,7 +1,9 @@
 ---
 layout: base.njk
-title: Product Designs - Experiments & Prototypes
-description: Design experiments, prototypes, and side projects by Adam J. Jolicoeur
+title: Product-Design Archives
+subtitle: project database // experimental prototypes
+description: Welcome to the product-design terminal interface.
+altDescription: Browse experimental prototypes and side projects from the wasteland of creative explorations.
 ---
 
 <div class="crt-overlay"></div>
@@ -10,11 +12,10 @@ description: Design experiments, prototypes, and side projects by Adam J. Jolico
     <div class="theme-btn orange" id="themeOrange" title="Wasteland Orange"></div>
 </div>
 <div class="header">
-    <h1>PRODUCT-DESIGN ARCHIVES</h1>
-    <p class="subtitle">project database // experimental prototypes</p>
+    <h1>{{ title }}</h1>
+    <p class="subtitle">{{ subtitle }}</p>
     <p class="description">
-        Welcome to the product-design terminal interface.
-        <br/> Browse experimental prototypes and side projects from the wasteland of creative explorations.
+        {{ description }} <br/> {{ altDescription }}
     </p>
 </div>
 <div class="terminal-interface">
@@ -35,20 +36,20 @@ description: Design experiments, prototypes, and side projects by Adam J. Jolico
                 <h2 class="content-title" id="activeTitle">{{ designs[0].title }}</h2>
                 <p class="content-description" id="activeDescription">{{ designs[0].detailedDescription }}</p>
             </div>
+            <div class="terminal-footer">
+                <div class="meta-box corner-frame" id="metaType">
+                    <span class="label">TYPE:</span>
+                    <span class="value" id="valType"></span>
+                </div>
+                <div class="meta-box corner-frame" id="metaRole">
+                    <span class="label">ROLE:</span>
+                    <span class="value" id="valRole"></span>
+                </div>
+                <div class="meta-box corner-frame" id="metaYear">
+                    <span class="label">YEAR:</span>
+                    <span class="value" id="valYear"></span>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-<div class="terminal-footer">
-    <div class="meta-box corner-frame" id="metaType">
-        <span class="label">TYPE:</span>
-        <span class="value" id="valType">---</span>
-    </div>
-    <div class="meta-box corner-frame" id="metaRole">
-        <span class="label">ROLE:</span>
-        <span class="value" id="valRole">---</span>
-    </div>
-    <div class="meta-box corner-frame" id="metaYear">
-        <span class="label">YEAR:</span>
-        <span class="value" id="valYear">---</span>
     </div>
 </div>

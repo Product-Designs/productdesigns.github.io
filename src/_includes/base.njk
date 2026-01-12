@@ -1,54 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or "Product Designs - Gamified Design Showcase" }}</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="{{ description or 'Explore an innovative design portfolio featuring gamified showcases inspired by open-world video game principles. Discover design projects through visual breadcrumb trails, achievement systems, and fog of war reveals.' }}">
-    <meta name="author" content="Adam J. Jolicoeur">
-    <meta name="theme-color" content="#0a0a0a">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ 'https://productdesigns.net' + page.url }}">
-    <meta property="og:title" content="{{ title or 'Product Designs - Gamified Design Showcase' }}">
-    <meta property="og:description" content="{{ description or 'Explore an innovative design portfolio featuring gamified showcases inspired by open-world video game principles.' }}">
-    <meta property="og:image" content="{{ ogImage or 'https://productdesigns.net/assets/images/og-image.jpg' }}">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{ 'https://productdesigns.net' + page.url }}">
-    <meta property="twitter:title" content="{{ title or 'Product Designs - Gamified Design Showcase' }}">
-    <meta property="twitter:description" content="{{ description or 'Explore an innovative design portfolio featuring gamified showcases inspired by open-world video game principles.' }}">
-    <meta property="twitter:image" content="{{ ogImage or 'https://productdesigns.net/assets/images/og-image.jpg' }}">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="{{ 'https://productdesigns.net' + page.url }}">
-
-    <!-- Preconnect to external resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Optimized font loading with font-display swap - Fallout Theme -->
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-
-    <!-- Compiled site styles -->
-    <link rel="stylesheet" href="/assets/css/site.css">
-</head>
-<body>
-    {# {% include "nav.njk" %} #}
-    {{ content | safe }}
-    {% if '/assets/js/main.js' | url %}
-    <script type="module" src="{{ '/assets/js/main.js' | url }}"></script>
-    {% endif %}
-    {# <script type="module" src="/assets/js/nav.js"></script> #}
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ title or "Product Designs - Gamified Design Showcase" }}</title>
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="{{ description or 'Explore an innovative design portfolio featuring gamified showcases inspired by open-world video game principles. Discover design projects through visual breadcrumb trails, achievement systems, and fog of war reveals.' }}">
+        <meta name="author" content="Adam J. Jolicoeur">
+        <meta
+        name="theme-color" content="#0a0a0a"> <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ 'https://productdesigns.net' + page.url }}">
+        <meta property="og:title" content="{{ title or 'Product Designs - Gamified Design Showcase' }}">
+        <meta property="og:description" content="{{ description or 'Explore an innovative design portfolio featuring gamified showcases inspired by open-world video game principles.' }}">
+        <meta
+        property="og:image" content="{{ ogImage or 'https://productdesigns.net/assets/images/og-image.jpg' }}"> <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="{{ 'https://productdesigns.net' + page.url }}">
+        <meta property="twitter:title" content="{{ title or 'Product Designs - Gamified Design Showcase' }}">
+        <meta property="twitter:description" content="{{ description or 'Explore an innovative design portfolio featuring gamified showcases inspired by open-world video game principles.' }}">
+        <meta
+        property="twitter:image" content="{{ ogImage or 'https://productdesigns.net/assets/images/og-image.jpg' }}"> <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+        <link
+        rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png"> <!-- Canonical URL -->
+        <link
+        rel="canonical" href="{{ 'https://productdesigns.net' + page.url }}"> <!-- Preconnect to external resources -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link
+        rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Optimized font loading with font-display swap - Fallout Theme -->
+        <link
+        href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;600;700;900&display=swap"
+            rel="stylesheet"> <!-- Compiled site styles -->
+        <link rel="stylesheet" href="/assets/css/site.css">
+    </head>
+    <body>
+        {{ content | safe }}
+        {% if '/assets/js/main.js' | url %}
+            <script type="module" src="{{ '/assets/js/main.js' | url }}"></script>
+        {% endif %}
+    </body>
 </html>

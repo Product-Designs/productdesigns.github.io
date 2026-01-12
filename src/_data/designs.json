@@ -9,10 +9,22 @@
     "description": "A progressive web app for seamless time management and productivity tracking.",
     "detailedDescription": "A progressive web app designed to help users manage their time effectively. Features include task tracking and detailed productivity reports.",
     "meta": [
-      { "label": "Platform", "value": "Web, PWA" },
-      { "label": "Duration", "value": "6 months" },
-      { "label": "Role", "value": "Lead Designer & Developer" },
-      { "label": "Year", "value": "2025" }
+      {
+        "label": "Platform",
+        "value": "Web, PWA"
+      },
+      {
+        "label": "Duration",
+        "value": "6 months"
+      },
+      {
+        "label": "Role",
+        "value": "Lead Designer & Developer"
+      },
+      {
+        "label": "Year",
+        "value": "2025"
+      }
     ]
   },
   {
@@ -25,10 +37,22 @@
     "description": "Comprehensive platform for tracking touraments, scores, and player stats.",
     "detailedDescription": "Comprehensive platform for tracking tournaments, scores, and player stats. Designed for Magic: The Gathering enthusiasts to manage their gaming activities efficiently.",
     "meta": [
-      { "label": "Platform", "value": "Web" },
-      { "label": "Duration", "value": "8 months" },
-      { "label": "Role", "value": "Developer, Designer" },
-      { "label": "Year", "value": "2024-2025" }
+      {
+        "label": "Platform",
+        "value": "Web"
+      },
+      {
+        "label": "Duration",
+        "value": "8 months"
+      },
+      {
+        "label": "Role",
+        "value": "Developer, Designer"
+      },
+      {
+        "label": "Year",
+        "value": "2024-2025"
+      }
     ]
   },
   {
@@ -41,10 +65,22 @@
     "description": "Track game stats, rosters, and history for local soccer leagues.",
     "detailedDescription": "Track game stats, rosters, and history for local soccer leagues. A user-friendly app designed to keep players and coaches informed and engaged throughout the season.",
     "meta": [
-      { "label": "Platform", "value": "iOS" },
-      { "label": "Duration", "value": "Ongoing" },
-      { "label": "Role", "value": "Product Designer and Developer" },
-      { "label": "Year", "value": "2025" }
+      {
+        "label": "Platform",
+        "value": "iOS"
+      },
+      {
+        "label": "Duration",
+        "value": "Ongoing"
+      },
+      {
+        "label": "Role",
+        "value": "Product Designer and Developer"
+      },
+      {
+        "label": "Year",
+        "value": "2025"
+      }
     ]
   },
   {
@@ -57,10 +93,22 @@
     "description": "A simple task tracking app to manage personal and professional tasks",
     "detailedDescription": "A simple task tracking app to manage personal and professional tasks. Features include due dates, priority levels, and progress tracking to help users stay organized and productive.",
     "meta": [
-      { "label": "Type", "value": "Productivity" },
-      { "label": "Duration", "value": "Ongoing" },
-      { "label": "Role", "value": "Development and Design" },
-      { "label": "Year", "value": "2025" }
+      {
+        "label": "Type",
+        "value": "Productivity"
+      },
+      {
+        "label": "Duration",
+        "value": "Ongoing"
+      },
+      {
+        "label": "Role",
+        "value": "Development and Design"
+      },
+      {
+        "label": "Year",
+        "value": "2025"
+      }
     ]
   },
   {
@@ -73,27 +121,22 @@
     "description": "A collection management app for movies and games.",
     "detailedDescription": "A collection management app for movies and games. Users can catalog their collections, track items they own, and discover new additions based on their interests.",
     "meta": [
-      { "label": "Type", "value": "Collections" },
-      { "label": "Duration", "value": "Ongoing" },
-      { "label": "Role", "value": "Development and Design" },
-      { "label": "Year", "value": "2025" }
-    ]
-  },
-
-  {
-    "title": "SwitchSuite",
-    "badge": "🏗️ Product",
-    "gradient": "linear-gradient(135deg, #ff00ff 0%, #00ffaa 100%)",
-    "screenshots": [
-      "/images/Timetrak.png"
-    ],
-    "description": "Centralized system for managing contracts and time logs.",
-    "detailedDescription": "Centralized system for managing contracts and time logs. Designed to streamline administrative tasks and improve efficiency for businesses.",
-    "meta": [
-      { "label": "Platform", "value": "Web" },
-      { "label": "Duration", "value": "12 months" },
-      { "label": "Role", "value": "Lead Product Designer" },
-      { "label": "Year", "value": "2020" }
+      {
+        "label": "Type",
+        "value": "Collections"
+      },
+      {
+        "label": "Duration",
+        "value": "Ongoing"
+      },
+      {
+        "label": "Role",
+        "value": "Development and Design"
+      },
+      {
+        "label": "Year",
+        "value": "2025"
+      }
     ]
   }
 ]

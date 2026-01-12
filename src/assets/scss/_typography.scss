@@ -1,0 +1,86 @@
+/* ============================================
+   Typography
+   ============================================ */
+
+.typography-showcase {
+    background: rgba(255, 255, 255, 3%);
+    border-radius: 20px;
+    padding: 40px;
+}
+
+.type-sample {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(255, 255, 255, 10%);
+}
+
+.type-display {
+    font-size: 64px;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.type-info {
+    color: rgba(255, 255, 255, 70%);
+    margin: 10px 0 20px;
+}
+
+.type-weights {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.type-weights span {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 5%);
+    border: 1px solid rgba(255, 255, 255, 20%);
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.weight-400 {
+    font-weight: 400;
+}
+
+.weight-500 {
+    font-weight: 500;
+}
+
+.weight-600 {
+    font-weight: 600;
+}
+
+.weight-700 {
+    font-weight: 700;
+}
+
+.type-examples {
+    display: grid;
+    gap: 30px;
+}
+
+.type-example h1,
+.type-example h2,
+.type-example h3 {
+    margin: 0 0 10px;
+    color: var(--color-white);
+}
+
+.type-spec {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 50%);
+    font-family: 'Courier New', monospace;
+    margin: 5px 0;
+}
+
+.body-text {
+    color: rgba(255, 255, 255, 80%);
+    line-height: 1.6;
+    margin: 0 0 10px;
+}
