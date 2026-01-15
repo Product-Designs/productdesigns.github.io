@@ -31,7 +31,9 @@
     "stylelint:fix": "npx stylelint --fix `src/assets/scss/site.scss`",
     "sass:build": "mkdir -p _site/assets/css && sass src/assets/scss/site.scss _site/assets/css/site.css --style=compressed",
     "copy:images": "mkdir -p _site/images && cp -r src/assets/images/* _site/images/",
+    "copy:js": "mkdir -p _site/assets/js && cp -r src/assets/js/* _site/assets/js/",
     "prepare:build": "npm run sass:build",
+    "prepare:serve": "npm run sass:build && npm run copy:js",
     "lint": "stylelint 'src/assets/scss/*.scss'",
     "lint:fix": "stylelint --fix 'src/assets/scss/*.scss'",
     "sass:watch": "mkdir -p _site/assets/css && sass --watch src/assets/scss:_site/assets/css --style=expanded",
@@ -39,7 +41,7 @@
     "eleventy:serve": "eleventy --serve",
     "prebuild": "npm run prepare:build",
     "build": "npm run eleventy:build && npm run copy:images",
-    "prestart": "npm run prepare:build",
+    "prestart": "npm run prepare:serve",
     "start": "npm-run-all --parallel sass:watch eleventy:serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

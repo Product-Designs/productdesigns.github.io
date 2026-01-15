@@ -1,0 +1,156 @@
+// ==================
+// Utility Classes
+// ==================
+
+// Responsive images
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--color-terminal-amber);
+    text-shadow: var(--shadow-amber-glow);
+    transition: all var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-pipboy-green);
+    text-shadow: var(--shadow-glow-text);
+    text-decoration: underline;
+}
+
+
+@media (width <=1400px) {
+    .terminal-footer {
+        flex-wrap: wrap;
+    }
+}
+
+/* ============================================
+   Less than or Equal to 1024px
+   ============================================ */
+
+@media (width <=1024px) {
+    .terminal-interface {
+        gap: 16px;
+        grid-template-columns: 200px 1fr;
+        padding: 0 1rem;
+    }
+
+    .terminal-footer {
+        flex-wrap: wrap;
+    }
+}
+
+/* ============================================
+   Less than or Equal to 768px
+   ============================================ */
+@media (width <=768px) {
+    .header {
+        h1 {
+            font-size: var(--font-size-h1);
+        }
+
+        .description {
+            font-size: var(--font-size-base);
+        }
+    }
+
+    .terminal-interface {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 1rem;
+        flex-direction: column;
+    }
+
+    .terminal-menu {
+        margin-bottom: 20px;
+
+        .menu-list {
+            flex-direction: column;
+        }
+
+        .menu-item {
+            padding: .5rem .75rem;
+            font-size: var(--font-size-base);
+        }
+    }
+
+    .terminal-content {
+        width: auto;
+
+        .detail-frame {
+            padding: 1rem;
+            min-height: 300px;
+        }
+
+        .content-title {
+            font-size: var(--font-size-h2);
+        }
+    }
+
+    .terminal-footer {
+        flex-direction: column;
+        align-items: center;
+
+        .meta-box {
+            width: 100%;
+            min-width: 0;
+        }
+    }
+
+    .menu-list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .brand-section {
+        padding: 60px 20px;
+    }
+
+    .logo-card {
+        grid-template-columns: 1fr;
+    }
+
+    .messaging-examples {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-hero {
+        min-height: 50vh;
+    }
+
+    .logos-section {
+        padding: 40px 20px;
+    }
+
+    .typography-showcase {
+        padding: 30px 20px;
+    }
+}
+
+/* ============================================
+   Less than or Equal to 480px
+   ============================================ */
+
+@media (width <=480px) {
+    .brand-attributes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .brand-attributes .attribute {
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo-preview {
+        padding: 20px;
+        min-height: 150px;
+    }
+
+    .type-display {
+        font-size: 48px;
+    }
+}

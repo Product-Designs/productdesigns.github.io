@@ -6,86 +6,18 @@
 
 :root {
   // ==================
-  // Colors
+  // Font Variables
   // ==================
 
-  // Primary Colors
-  --color-neon-green: #43e97b;
-  --color-neon-cyan: #38f9d7;
-  --color-neon-magenta: #f093fb;
-
-  // Background Colors
-  --color-deep-space: #0f0f1e;
-  --color-midnight-blue: #1a1a2e;
-
-  // Supporting Colors
-  --color-white: #ffffff;
-  --color-black: #000000;
-
-  // ==================
-  // Opacity Variants
-  // ==================
-
-  // White Opacity
-  --white-90: rgba(255, 255, 255, 0.9);
-  --white-80: rgba(255, 255, 255, 0.8);
-  --white-70: rgba(255, 255, 255, 0.7);
-  --white-50: rgba(255, 255, 255, 0.5);
-  --white-20: rgba(255, 255, 255, 0.2);
-  --white-10: rgba(255, 255, 255, 0.1);
-  --white-05: rgba(255, 255, 255, 0.05);
-  --white-03: rgba(255, 255, 255, 0.03);
-  --white-02: rgba(255, 255, 255, 0.02);
-
-  // Black Opacity
-  --black-90: rgba(0, 0, 0, 0.9);
-  --black-80: rgba(0, 0, 0, 0.8);
-  --black-70: rgba(0, 0, 0, 0.7);
-  --black-50: rgba(0, 0, 0, 0.5);
-
-  // Neon Color Opacity (for glows and effects)
-  --neon-green-60: rgba(67, 233, 123, 0.6);
-  --neon-green-50: rgba(67, 233, 123, 0.5);
-  --neon-green-40: rgba(67, 233, 123, 0.4);
-  --neon-green-30: rgba(67, 233, 123, 0.3);
-  --neon-green-20: rgba(67, 233, 123, 0.2);
-  --neon-green-10: rgba(67, 233, 123, 0.1);
-
-  --neon-magenta-10: rgba(240, 147, 251, 0.1);
-
-  // ==================
-  // Gradients
-  // ==================
-
-  // Primary Gradient (Green → Cyan)
-  --gradient-primary: linear-gradient(135deg, var(--color-neon-green) 0%, var(--color-neon-cyan) 100%);
-  --gradient-primary-90: linear-gradient(90deg, var(--color-neon-green) 0%, var(--color-neon-cyan) 100%);
-
-  // Rainbow Gradient (Full Spectrum)
-  --gradient-rainbow: linear-gradient(135deg, var(--color-neon-green) 0%, var(--color-neon-cyan) 50%, var(--color-neon-magenta) 100%);
-
-  // Achievement Gradient (Magenta → Red)
-  --gradient-achievement: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-
-  // Purple Gradient (Blue → Purple)
-  --gradient-purple: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-
-  // Background Gradients
-  --gradient-bg-overlay: linear-gradient(to bottom, transparent 0%, rgba(15, 15, 30, 0.8) 100%);
-  --gradient-bg-peek: linear-gradient(90deg, transparent 0%, rgba(15, 15, 30, 0.8) 100%);
-
-  // ==================
-  // Typography
-  // ==================
-
-  --font-family-primary: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-primary: 'Share Tech Mono', 'Courier New', monospace;
+  --font-family-display: 'Orbitron', 'Share Tech Mono', monospace;
 
   // Font Sizes
-  --font-size-display: 3em;        // 48px at base
-  --font-size-h1: 2.5em;           // 40px at base
-  --font-size-h2: 1.5em;           // 24px at base
-  --font-size-base: 1em;           // 16px
-  --font-size-small: 0.85em;       // ~13-14px
+  --font-size-display: clamp(3em, 5vw, 6em); // 48px at base
+  --font-size-h1: clamp(2.5em, 4vw, 4em); // 40px at base
+  --font-size-h2: clamp(1.5em, 3vw, 2em); // 24px at base
+  --font-size-base: clamp(1em, 2vw, 1.5em); // 16px
+  --font-size-small: clamp(0.85em, 1vw, 1em); // ~13-14px
 
   // Font Weights
   --font-weight-regular: 400;
@@ -103,6 +35,87 @@
   --letter-spacing-tight: -0.02em;
   --letter-spacing-normal: 0;
   --letter-spacing-wide: 1px;
+}
+
+:root {
+  // ==================
+  // Colors - Fallout Theme
+  // ==================
+
+  // Primary Colors - Pip-Boy Green & Amber
+  --color-pipboy-green: #00ff41;
+  --color-pipboy-green-glow: #19ff81;
+  --color-pipboy-dark-green-gradient: #041607;
+  --color-pipboy-light-green-gradient: #11581e;
+  --color-terminal-amber: #ffaa00;
+  --color-vault-blue: #0066cc;
+
+  // Background Colors - Post-Apocalyptic
+  --color-vault-black: #0a0a0a;
+  --color-wasteland-gray: #1a1a1a;
+  --color-rusted-brown: #4a3020;
+
+  // Supporting Colors
+  --color-white: #e8e6e3;
+  --color-black: #000000;
+  --color-radiation-yellow: #d4af37;
+
+  --color-terminal-highlight: var(--color-rusted-brown);
+
+  // ==================
+  // Opacity Variants
+  // ==================
+
+  // White Opacity (off-white for aged terminals)
+  --white-90: rgba(232, 230, 227, 90%);
+  --white-80: rgba(232, 230, 227, 80%);
+  --white-70: rgba(232, 230, 227, 70%);
+  --white-50: rgba(232, 230, 227, 50%);
+  --white-20: rgba(232, 230, 227, 20%);
+  --white-10: rgba(232, 230, 227, 10%);
+  --white-05: rgba(232, 230, 227, 5%);
+  --white-03: rgba(232, 230, 227, 3%);
+  --white-02: rgba(232, 230, 227, 2%);
+
+  // Black Opacity
+  --black-90: rgba(0, 0, 0, 90%);
+  --black-80: rgba(0, 0, 0, 80%);
+  --black-70: rgba(0, 0, 0, 70%);
+  --black-50: rgba(0, 0, 0, 50%);
+
+  // Pip-Boy Green Opacity (for glows and CRT effects)
+  --pipboy-green-80: rgba(0, 255, 65, 80%);
+  --pipboy-green-60: rgba(0, 255, 65, 60%);
+  --pipboy-green-50: rgba(0, 255, 65, 50%);
+  --pipboy-green-40: rgba(0, 255, 65, 40%);
+  --pipboy-green-30: rgba(0, 255, 65, 30%);
+  --pipboy-green-20: rgba(0, 255, 65, 20%);
+  --pipboy-green-10: rgba(0, 255, 65, 10%);
+
+  // Amber Terminal Opacity
+  --terminal-amber-50: rgba(255, 170, 0, 50%);
+  --terminal-amber-30: rgba(255, 170, 0, 30%);
+  --terminal-amber-10: rgba(255, 170, 0, 10%);
+
+  // ==================
+  // Gradients - Fallout Theme
+  // ==================
+
+  // Pip-Boy Green Gradient (dark green → light green)
+  --gradient-pipboy-green: radial-gradient(var(--color-pipboy-light-green-gradient) 0%, var(--color-pipboy-dark-green-gradient) 100%);
+
+  // Primary Gradient (Pip-Boy Green → Amber)
+  --gradient-primary: linear-gradient(135deg, var(--color-pipboy-green) 0%, var(--color-terminal-amber) 100%);
+  --gradient-primary-90: linear-gradient(90deg, var(--color-pipboy-green) 0%, var(--color-terminal-amber) 100%);
+
+  // Terminal Gradient (Amber → Rust)
+  --gradient-terminal: linear-gradient(135deg, var(--color-terminal-amber) 0%, var(--color-rusted-brown) 100%);
+
+  // Vault-Tec Gradient (Vault Blue → Black)
+  --gradient-vault: linear-gradient(135deg, var(--color-vault-blue) 0%, var(--color-vault-black) 100%);
+
+  // Radiation Gradient (Yellow → Green)
+  --gradient-radiation: linear-gradient(135deg, var(--color-radiation-yellow) 0%, var(--color-pipboy-green) 100%);
 
   // ==================
   // Spacing
@@ -125,18 +138,29 @@
   --radius-round: 50%;
 
   // ==================
-  // Shadows
+  // Theme Variables (Dynamic)
+  // ==================
+  --theme-color: var(--color-pipboy-green);
+  --theme-color-rgb: 0, 255, 65;
+  --theme-glow: var(--shadow-glow-border);
+  --theme-bg-opacity: var(--pipboy-green-10);
+
+  // ==================
+  // Shadows - CRT Glow Effects
   // ==================
 
-  // Glow Effects
-  --shadow-glow-text: 0 0 10px var(--neon-green-50);
-  --shadow-glow-box: 0 0 60px var(--neon-green-30), 0 30px 80px var(--neon-green-40);
-  --shadow-glow-border: 0 0 20px var(--neon-green-30);
+  // Glow Effects (Pip-Boy Green CRT)
+  --shadow-glow-text: 0 0 10px var(--pipboy-green-50), 0 0 20px var(--pipboy-green-30);
+  --shadow-glow-box: 0 0 60px var(--pipboy-green-30), 0 30px 80px var(--pipboy-green-40);
+  --shadow-glow-border: 0 0 20px var(--pipboy-green-30), 0 0 40px var(--pipboy-green-20);
 
   // Regular Shadows
-  --shadow-sm: 0 10px 40px var(--neon-green-30);
+  --shadow-sm: 0 10px 40px var(--pipboy-green-30);
   --shadow-md: 0 20px 60px var(--black-50);
-  --shadow-lg: 0 30px 80px var(--neon-green-40), 0 0 60px var(--neon-green-30);
+  --shadow-lg: 0 30px 80px var(--pipboy-green-40), 0 0 60px var(--pipboy-green-30);
+
+  // Amber Glow (alternate terminal style)
+  --shadow-amber-glow: 0 0 15px var(--terminal-amber-50), 0 0 30px var(--terminal-amber-30);
 
   // ==================
   // Transitions
@@ -181,4 +205,25 @@
   // Mobile: 480px
   // Tablet: 768px
   // Desktop: 1024px
+}
+
+// ==================
+// Orange Wasteland Theme
+// ==================
+body.theme-orange {
+  --theme-color: var(--color-terminal-amber);
+  --theme-color-rgb: 255, 170, 0;
+  --theme-glow: var(--shadow-amber-glow);
+  --theme-bg-opacity: var(--terminal-amber-10);
+
+  // Overrides for specific elements
+  --color-pipboy-green: var(--color-terminal-amber);
+  --pipboy-green-10: var(--terminal-amber-10);
+  --pipboy-green-20: var(--terminal-amber-30);
+  --pipboy-green-30: rgba(255, 170, 0, 30%);
+  --shadow-glow-text: 0 0 10px rgba(255, 170, 0, 50%), 0 0 20px rgba(255, 170, 0, 30%);
+  --color-terminal-highlight: var(--color-pipboy-light-green-gradient);
+
+  // Background Overrides
+  --gradient-pipboy-green: radial-gradient(var(--color-rusted-brown) 0%, var(--color-wasteland-gray) 100%);
 }

@@ -4,6 +4,8 @@
     "stylelint-order"
   ],
   "rules": {
+    "color-hex-length": "long",
+    "color-function-alias-notation": "with-alpha",
     "order/order": [
       "custom-properties",
       "declarations"
@@ -15,6 +17,7 @@
     "color-function-notation": null,
     "rule-empty-line-before": null,
     "at-rule-empty-line-before": null,
-    "scss/at-extend-no-missing-placeholder": null
+    "scss/at-extend-no-missing-placeholder": null,
+    "scss/comment-no-empty": null
   }
 }

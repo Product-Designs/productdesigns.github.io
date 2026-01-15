@@ -16,20 +16,12 @@
 // ==================
 // Global styles, resets, and utilities
 @use "base";
+@use "main";
+@use "keyframes";
+@use "utility";
 @use "alignment";
 
-// ==================
-// 3. Navigation
-// ==================
-// Slide-out navigation menu
-// @import "navigation";
-
-// ==================
-// 4. Page-Specific Styles
-// ==================
-
-// Main showcase page (Visual Breadcrumb Trail)
-@use "main";
+@use "theme-switcher";
 
 // Discovery & Progress System
 // @import "discovery-progress";
@@ -39,6 +31,18 @@
 
 // Branding page
 @use "branding";
+
+@use "logo-showcase";
+
+@use "color-palette";
+
+@use "typography";
+
+@use "brand-attributes";
+
+@use "usage-guidelines";
+
+@use "sections";
 
 // Component examples page
 // @import "examples";

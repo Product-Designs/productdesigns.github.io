@@ -1,0 +1,89 @@
+/* ============================================
+   Brand Voice
+   ============================================ */
+
+.voice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.voice-card {
+    background: rgba(255, 255, 255, 5%);
+    border: 2px solid rgba(67, 233, 123, 20%);
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.voice-card:hover {
+    border-color: rgba(67, 233, 123, 50%);
+    box-shadow: 0 5px 20px rgba(67, 233, 123, 20%);
+    transform: translateY(-3px);
+}
+
+.voice-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin: 0 0 10px;
+}
+
+.voice-card p {
+    color: rgba(255, 255, 255, 70%);
+    font-size: 14px;
+    margin: 0;
+}
+
+.messaging-examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.message-good,
+.message-bad {
+    background: rgba(255, 255, 255, 3%);
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.message-good {
+    border: 2px solid rgba(67, 233, 123, 30%);
+}
+
+.message-bad {
+    border: 2px solid rgba(245, 87, 108, 30%);
+}
+
+.message-good h4,
+.message-bad h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.message-good h4 {
+    color: #43e97b;
+}
+
+.message-bad h4 {
+    color: #f5576c;
+}
+
+.message-good ul,
+.message-bad ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.message-good li,
+.message-bad li {
+    padding: 10px 0;
+    color: rgba(255, 255, 255, 80%);
+    line-height: 1.6;
+}

@@ -1,205 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Designs - Experiments &amp; Prototypes</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Design experiments, prototypes, and side projects by Adam J. Jolicoeur">
-    <meta name="author" content="Adam J. Jolicoeur">
-    <meta name="theme-color" content="#0f0f1e">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://productdesigns.net/">
-    <meta property="og:title" content="Product Designs - Experiments &amp; Prototypes">
-    <meta property="og:description" content="Design experiments, prototypes, and side projects by Adam J. Jolicoeur">
-    <meta property="og:image" content="https://productdesigns.net/assets/images/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://productdesigns.net/">
-    <meta property="twitter:title" content="Product Designs - Experiments &amp; Prototypes">
-    <meta property="twitter:description" content="Design experiments, prototypes, and side projects by Adam J. Jolicoeur">
-    <meta property="twitter:image" content="https://productdesigns.net/assets/images/og-image.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://productdesigns.net/">
-
-    <!-- Preconnect to external resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Optimized font loading with font-display swap -->
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Compiled site styles -->
-  <script type="module" crossorigin src="/assets/index-DiHA3hNJ.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-N07LKqGb.css">
-</head>
-<body>
-    
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product-Design Archives</title>
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Welcome to the product-design terminal interface.">
+        <meta name="author" content="Adam J. Jolicoeur">
+        <meta
+        name="theme-color" content="#0a0a0a"> <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://productdesigns.net/">
+        <meta property="og:title" content="Product-Design Archives">
+        <meta property="og:description" content="Welcome to the product-design terminal interface.">
+        <meta
+        property="og:image" content="https://productdesigns.net/assets/images/og-image.jpg"> <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://productdesigns.net/">
+        <meta property="twitter:title" content="Product-Design Archives">
+        <meta property="twitter:description" content="Welcome to the product-design terminal interface.">
+        <meta
+        property="twitter:image" content="https://productdesigns.net/assets/images/og-image.jpg"> <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+        <link
+        rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png"> <!-- Canonical URL -->
+        <link
+        rel="canonical" href="https://productdesigns.net/"> <!-- Preconnect to external resources -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link
+        rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Optimized font loading with font-display swap - Fallout Theme -->
+        <link
+        href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;500;600;700;900&display=swap"
+            rel="stylesheet"> <!-- Compiled site styles -->
+        <link rel="stylesheet" href="/assets/css/site.css">
+    </head>
+    <body>
+        
+<div class="crt-overlay"></div>
+<div class="theme-switcher">
+    <div class="theme-btn green active" id="themeGreen" title="Vault-Tec Green"></div>
+    <div class="theme-btn orange" id="themeOrange" title="Wasteland Orange"></div>
+</div>
 <div class="header">
-  <h1>PRODUCT DESIGNS</h1>
-  <p>Experiments, Prototypes &amp; Side Projects</p>
-  <p class="pt-2">
-    This is my playground for exploring new technologies, design patterns, and ideas that don't fit traditional case studies.
-    <br />
-    These projects range from weekend experiments to learning exercises—they're not polished portfolio pieces, but they show how I think, learn, and prototype.
-    <br />
-    For my professional portfolio, visit: <a href="https://www.adamjolicoeur.com" alt="link to adamjolicoeur.com" target="_blank">adamjolicoeur.com</a>
-  </p>
+    <h1>Product-Design Archives</h1>
+    <p class="subtitle">project database // experimental prototypes</p>
+    <p class="description">
+        Welcome to the product-design terminal interface. <br/> Browse experimental prototypes and side projects from the wasteland of creative explorations.
+    </p>
 </div>
-
-<div class="showcase-container">
-  <div class="design-trail" id="trail">
-    
-    <div class="design-card "
-        data-title="TimeTracker App"
-        data-badge="🎨 UI/UX - Dev"
-        data-gradient="linear-gradient(135deg, #ff0080 0%, #ff8c00 100%)"
-        data-screenshot="/images/TimeTrackerPro.png"
-        data-description="A progressive web app designed to help users manage their time effectively. Features include task tracking and detailed productivity reports."
-        data-meta='[{"label":"Platform","value":"Web, PWA"},{"label":"Duration","value":"6 months"},{"label":"Role","value":"Lead Designer & Developer"},{"label":"Year","value":"2025"}]'>
-      <div class="design-image" style="background-image: linear-gradient(135deg, #ff0080 0%, #ff8c00 100%); box-shadow: inset 0 0 100px rgba(50, 0, 30, 0.3);">
-      </div>
-        <div class="design-badge">🎨 UI/UX - Dev</div>
-      <div class="design-info">
-        <div>
-          <h2 class="design-title">TimeTracker App</h2>
-          <p class="design-description">A progressive web app for seamless time management and productivity tracking.</p>
+<div class="terminal-interface">
+    <div class="terminal-menu">
+        <div class="corner-frame">
+            <ul class="menu-list" id="projectList">
+                
+                    <li class="menu-item active" data-index="0" data-title="TimeTracker App" data-description="A progressive web app designed to help users manage their time effectively. Features include task tracking and detailed productivity reports." data-meta='[{"label":"Platform","value":"Web, PWA"},{"label":"Duration","value":"6 months"},{"label":"Role","value":"Lead Designer & Developer"},{"label":"Year","value":"2025"}]'>
+                        TimeTracker App
+                    </li>
+                
+                    <li class="menu-item " data-index="1" data-title="Game Tracker" data-description="Comprehensive platform for tracking tournaments, scores, and player stats. Designed for Magic: The Gathering enthusiasts to manage their gaming activities efficiently." data-meta='[{"label":"Platform","value":"Web"},{"label":"Duration","value":"8 months"},{"label":"Role","value":"Developer, Designer"},{"label":"Year","value":"2024-2025"}]'>
+                        Game Tracker
+                    </li>
+                
+                    <li class="menu-item " data-index="2" data-title="Soccer Game Tracker" data-description="Track game stats, rosters, and history for local soccer leagues. A user-friendly app designed to keep players and coaches informed and engaged throughout the season." data-meta='[{"label":"Platform","value":"iOS"},{"label":"Duration","value":"Ongoing"},{"label":"Role","value":"Product Designer and Developer"},{"label":"Year","value":"2025"}]'>
+                        Soccer Game Tracker
+                    </li>
+                
+                    <li class="menu-item " data-index="3" data-title="Task Stat" data-description="A simple task tracking app to manage personal and professional tasks. Features include due dates, priority levels, and progress tracking to help users stay organized and productive." data-meta='[{"label":"Type","value":"Productivity"},{"label":"Duration","value":"Ongoing"},{"label":"Role","value":"Development and Design"},{"label":"Year","value":"2025"}]'>
+                        Task Stat
+                    </li>
+                
+                    <li class="menu-item " data-index="4" data-title="Collect Some More" data-description="A collection management app for movies and games. Users can catalog their collections, track items they own, and discover new additions based on their interests." data-meta='[{"label":"Type","value":"Collections"},{"label":"Duration","value":"Ongoing"},{"label":"Role","value":"Development and Design"},{"label":"Year","value":"2025"}]'>
+                        Collect Some More
+                    </li>
+                
+            </ul>
         </div>
-      </div>
     </div>
-    
-    <div class="design-card peeking"
-        data-title="Game Tracker"
-        data-badge="💻 Dev and Design"
-        data-gradient="linear-gradient(135deg, #00d4ff 0%, #0066ff 100%)"
-        data-screenshot="/images/MoonsilverWaypoints.png"
-        data-description="Comprehensive platform for tracking tournaments, scores, and player stats. Designed for Magic: The Gathering enthusiasts to manage their gaming activities efficiently."
-        data-meta='[{"label":"Platform","value":"Web"},{"label":"Duration","value":"8 months"},{"label":"Role","value":"Developer, Designer"},{"label":"Year","value":"2024-2025"}]'>
-      <div class="design-image" style="background-image: linear-gradient(135deg, #00d4ff 0%, #0066ff 100%); box-shadow: inset 0 0 100px rgba(100, 0, 60, 0.3);">
-      </div>
-        <div class="design-badge">💻 Dev and Design</div>
-      <div class="design-info">
-        <div>
-          <h2 class="design-title">Game Tracker</h2>
-          <p class="design-description">Comprehensive platform for tracking touraments, scores, and player stats.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="design-card peeking"
-        data-title="Soccer Game Tracker"
-        data-badge="⚽️ Sports App"
-        data-gradient="linear-gradient(135deg, #00ff88 0%, #00ffdd 100%)"
-        data-screenshot="/images/SoccerGameTracker.png"
-        data-description="Track game stats, rosters, and history for local soccer leagues. A user-friendly app designed to keep players and coaches informed and engaged throughout the season."
-        data-meta='[{"label":"Platform","value":"iOS"},{"label":"Duration","value":"Ongoing"},{"label":"Role","value":"Product Designer and Developer"},{"label":"Year","value":"2025"}]'>
-      <div class="design-image" style="background-image: linear-gradient(135deg, #00ff88 0%, #00ffdd 100%); box-shadow: inset 0 0 100px rgba(150, 0, 90, 0.3);">
-      </div>
-        <div class="design-badge">⚽️ Sports App</div>
-      <div class="design-info">
-        <div>
-          <h2 class="design-title">Soccer Game Tracker</h2>
-          <p class="design-description">Track game stats, rosters, and history for local soccer leagues.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="design-card peeking"
-        data-title="Task Stat"
-        data-badge="✅ Productivity"
-        data-gradient="linear-gradient(135deg, #ff0099 0%, #ffff00 100%)"
-        data-screenshot="/images/TaskStat.png"
-        data-description="A simple task tracking app to manage personal and professional tasks. Features include due dates, priority levels, and progress tracking to help users stay organized and productive."
-        data-meta='[{"label":"Type","value":"Productivity"},{"label":"Duration","value":"Ongoing"},{"label":"Role","value":"Development and Design"},{"label":"Year","value":"2025"}]'>
-      <div class="design-image" style="background-image: linear-gradient(135deg, #ff0099 0%, #ffff00 100%); box-shadow: inset 0 0 100px rgba(200, 0, 120, 0.3);">
-      </div>
-        <div class="design-badge">✅ Productivity</div>
-      <div class="design-info">
-        <div>
-          <h2 class="design-title">Task Stat</h2>
-          <p class="design-description">A simple task tracking app to manage personal and professional tasks</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="design-card peeking"
-        data-title="Collect Some More"
-        data-badge="📀 Collections"
-        data-gradient="linear-gradient(135deg, #fff999 0%, #fff000 100%)"
-        data-screenshot="/images/CollectSomeMore_movies.png"
-        data-description="A collection management app for movies and games. Users can catalog their collections, track items they own, and discover new additions based on their interests."
-        data-meta='[{"label":"Type","value":"Collections"},{"label":"Duration","value":"Ongoing"},{"label":"Role","value":"Development and Design"},{"label":"Year","value":"2025"}]'>
-      <div class="design-image" style="background-image: linear-gradient(135deg, #fff999 0%, #fff000 100%); box-shadow: inset 0 0 100px rgba(250, 0, 150, 0.3);">
-      </div>
-        <div class="design-badge">📀 Collections</div>
-      <div class="design-info">
-        <div>
-          <h2 class="design-title">Collect Some More</h2>
-          <p class="design-description">A collection management app for movies and games.</p>
-        </div>
-      </div>
-    </div>
-    
-    <div class="design-card peeking"
-        data-title="SwitchSuite"
-        data-badge="🏗️ Product"
-        data-gradient="linear-gradient(135deg, #ff00ff 0%, #00ffaa 100%)"
-        data-screenshot="/images/Timetrak.png"
-        data-description="Centralized system for managing contracts and time logs. Designed to streamline administrative tasks and improve efficiency for businesses."
-        data-meta='[{"label":"Platform","value":"Web"},{"label":"Duration","value":"12 months"},{"label":"Role","value":"Lead Product Designer"},{"label":"Year","value":"2020"}]'>
-      <div class="design-image" style="background-image: linear-gradient(135deg, #ff00ff 0%, #00ffaa 100%); box-shadow: inset 0 0 100px rgba(300, 0, 180, 0.3);">
-      </div>
-        <div class="design-badge">🏗️ Product</div>
-      <div class="design-info">
-        <div>
-          <h2 class="design-title">SwitchSuite</h2>
-          <p class="design-description">Centralized system for managing contracts and time logs.</p>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-
-    <div class="nav-hint next-hint" id="nextHint">→</div>
-    <div class="nav-hint prev-hint" id="prevHint">←</div>
-</div>
-
-<div class="progress-indicator" id="progressIndicator"></div>
-
-<!-- Detail Section -->
-<div class="detail-section" id="detailSection">
-    <div class="detail-container">
-        <div class="detail-close" id="detailClose">×</div>
-        <div class="detail-header">
-            <div class="detail-image" id="detailImage" style="display: flex; justify-content: center; align-items: center;">
-              <img class="detail-screenshot" id="detailScreenshot" src="" alt="Design Screenshot" style="border-radius: 8px;" />
+    <div class="terminal-content">
+        <div class="corner-frame detail-frame">
+            <div id="contentArea">
+                <h2 class="content-title" id="activeTitle">TimeTracker App</h2>
+                <p class="content-description" id="activeDescription">A progressive web app designed to help users manage their time effectively. Features include task tracking and detailed productivity reports.</p>
             </div>
-            <div class="detail-info">
-                <div class="detail-badge" id="detailBadge"></div>
-                <h2 class="detail-title" id="detailTitle"></h2>
-                <p class="detail-description" id="detailDescription"></p>
+            <div class="terminal-footer">
+                <div class="meta-box corner-frame" id="metaType">
+                    <span class="label">TYPE:</span>
+                    <span class="value" id="valType"></span>
+                </div>
+                <div class="meta-box corner-frame" id="metaRole">
+                    <span class="label">ROLE:</span>
+                    <span class="value" id="valRole"></span>
+                </div>
+                <div class="meta-box corner-frame" id="metaYear">
+                    <span class="label">YEAR:</span>
+                    <span class="value" id="valYear"></span>
+                </div>
             </div>
         </div>
-        <div class="detail-meta" id="detailMeta">
-            <!-- Meta items will be dynamically inserted here -->
-        </div>
     </div>
 </div>
-
-    
-    
-    
-</body>
+        
+            <script type="module" src="/assets/js/main.js"></script>
+        
+    </body>
 </html>

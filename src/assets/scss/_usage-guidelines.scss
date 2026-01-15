@@ -1,0 +1,96 @@
+/* ============================================
+   Usage Guidelines
+   ============================================ */
+
+.usage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.usage-card {
+    background: rgba(255, 255, 255, 5%);
+    border: 2px solid rgba(67, 233, 123, 20%);
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.usage-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #43e97b;
+    margin: 0 0 20px;
+}
+
+.usage-examples {
+    display: grid;
+    gap: 20px;
+}
+
+.correct,
+.incorrect {
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.correct {
+    background: rgba(67, 233, 123, 10%);
+    border: 1px solid rgba(67, 233, 123, 30%);
+}
+
+.incorrect {
+    background: rgba(245, 87, 108, 10%);
+    border: 1px solid rgba(245, 87, 108, 30%);
+}
+
+.correct .label,
+.incorrect .label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.correct .label {
+    color: #43e97b;
+}
+
+.incorrect .label {
+    color: #f5576c;
+}
+
+.correct p,
+.incorrect p {
+    margin: 5px 0;
+    color: rgba(255, 255, 255, 80%);
+}
+
+.code-examples,
+.package-examples,
+.social-examples {
+    display: grid;
+    gap: 10px;
+}
+
+.code-examples code {
+    display: block;
+    padding: 12px 15px;
+    background: rgba(0, 0, 0, 30%);
+    border: 1px solid rgba(67, 233, 123, 30%);
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #43e97b;
+}
+
+.package-examples p,
+.social-examples p {
+    padding: 10px 0;
+    color: rgba(255, 255, 255, 80%);
+    margin: 0;
+}
+
+.package-examples strong,
+.social-examples strong {
+    color: #43e97b;
+}
