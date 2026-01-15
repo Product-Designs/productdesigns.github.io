@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or "Apple-Inspired Portfolio" }}</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{{ description or 'An Apple iOS-inspired portfolio showcasing beautiful design and smooth interactions.' }}">
+    <meta name="author" content="Adam J. Jolicoeur">
+    <meta name="theme-color" content="#007aff">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ 'https://productdesigns.net' + page.url }}">
+    <meta property="og:title" content="{{ title or 'Apple-Inspired Portfolio' }}">
+    <meta property="og:description" content="{{ description or 'An Apple iOS-inspired portfolio showcasing beautiful design and smooth interactions.' }}">
+    <meta property="og:image" content="{{ ogImage or 'https://productdesigns.net/assets/images/og-image.jpg' }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ 'https://productdesigns.net' + page.url }}">
+    <meta property="twitter:title" content="{{ title or 'Apple-Inspired Portfolio' }}">
+    <meta property="twitter:description" content="{{ description or 'An Apple iOS-inspired portfolio showcasing beautiful design and smooth interactions.' }}">
+    <meta property="twitter:image" content="{{ ogImage or 'https://productdesigns.net/assets/images/og-image.jpg' }}">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ 'https://productdesigns.net' + page.url }}">
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts - Inter (closest to SF Pro) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Apple Portfolio Styles -->
+    <link rel="stylesheet" href="/assets/css/apple-portfolio.css">
+</head>
+<body class="apple-portfolio">
+    {{ content | safe }}
+
+    <!-- Apple Portfolio JavaScript -->
+    <script type="module" src="/assets/js/apple-portfolio.js"></script>
+</body>
+</html>
