@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * Updates the terminal display with project data
-     * @param {HTMLElement} item - The clicked menu item
+     * @param {HTMLElement} item - The clicked menu item 
      */
     function updateDisplay(item) {
         // Parse data from attributes
